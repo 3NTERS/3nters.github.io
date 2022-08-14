@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'zhuziAwa1n';
+    src: url(../diy_font/zhuziAwa1n.woff);
+}
+
+body {
+    font-family: 'zhuziAwa1n';
+}
