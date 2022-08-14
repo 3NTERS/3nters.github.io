@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'zhuziAwa1n';
-    src: url(../diy_font/zhuziAwa1n.woff);
+    src: url('https://pic-go-img.oss-cn-hangzhou.aliyuncs.com/ZhuZiAWan.woff2');
 }
 
 body {
