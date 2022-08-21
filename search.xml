@@ -4,6 +4,87 @@
   
     
     <entry>
+      <title>javaScript入门笔记（六）字符串</title>
+      <link href="/2022/08/21/javaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AD%EF%BC%89%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+      <url>/2022/08/21/javaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AD%EF%BC%89%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="javaScript字符串"><a href="#javaScript字符串" class="headerlink" title="javaScript字符串"></a>javaScript字符串</h1><ul><li>可以使用<code>&#39;&#39;</code>或<code>&quot;&quot;</code>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> carname1=<span class="string">&quot;Volvo XC60&quot;</span>;<span class="comment">//Volvo XC60</span></span><br><span class="line"><span class="keyword">var</span> carname2=<span class="string">&#x27;Volvo XC60&#x27;</span>;<span class="comment">//Volvo XC60</span></span><br></pre></td></tr></table></figure></li><li>可以使用索引（从<code>0</code>开始）访问字符串中任何字符</li><li>可以在字符串中使用转义字符<code>\</code>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> answer1=<span class="string">&#x27;It\&#x27;s alright&#x27;</span>;<span class="comment">//It&#x27;s alright</span></span><br><span class="line"><span class="keyword">var</span> answer2=<span class="string">&quot;He is called \&quot;Johnny\&quot;&quot;</span>;<span class="comment">//He is called &quot;Johnny&quot;</span></span><br><span class="line"><span class="keyword">var</span> answer3=<span class="string">&#x27;He is called &quot;Johnny&quot;&#x27;</span>;<span class="comment">//He is called &quot;Johnny&quot;</span></span><br></pre></td></tr></table></figure><h1 id="计算字符串长度"><a href="#计算字符串长度" class="headerlink" title="计算字符串长度"></a>计算字符串长度</h1></li></ul><p><code>length</code>是属性，不是方法所以不用加<code>()</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> txt=<span class="string">&quot;asdasdas&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> ln=txt.<span class="property">length</span>;</span><br></pre></td></tr></table></figure></p><h1 id="查找字符串"><a href="#查找字符串" class="headerlink" title="查找字符串"></a>查找字符串</h1><blockquote><p>都是从<code>0</code>位置开始算，实际位置需要<code>+1</code></p><ul><li>使用<code>indexOf()</code>来定位字符串中某个字符首次出现位置</li><li>使用<code>lastIndexOf()</code>从字符串末尾来定位字符串中某个字符首次出现位置</li></ul></blockquote><p>不论从前还是从末尾找，给出的位置始终是字符串的索引值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">&quot;Hello world, welcome to the welcome.&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> n=str.<span class="title function_">indexOf</span>(<span class="string">&quot;welcome&quot;</span>);<span class="comment">//输出13</span></span><br><span class="line"><span class="keyword">var</span> n=str.<span class="title function_">lastIndexOf</span>(<span class="string">&quot;welcome&quot;</span>);<span class="comment">//输出28</span></span><br></pre></td></tr></table></figure></p><h1 id="内容匹配"><a href="#内容匹配" class="headerlink" title="内容匹配"></a>内容匹配</h1><p><code>match()</code>函数用来查找字符串中特定的字符，并且如果找到的话则返回这个字符<br><div class="tabs" id="样例"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#样例-1">代码</button></li><li class="tab"><button type="button" data-href="#样例-2">预览</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="样例-1"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str=<span class="string">&quot;Hello world!&quot;</span>;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(str.<span class="title function_">match</span>(<span class="string">&quot;world&quot;</span>)+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(str.<span class="title function_">match</span>(<span class="string">&quot;World&quot;</span>)+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(str.<span class="title function_">match</span>(<span class="string">&quot;world!&quot;</span>));</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="样例-2"><script>var str="Hello world!";document.write(str.match("world")+"<br>");document.write(str.match("World")+"<br>");document.write(str.match("world!"));</script><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div></p><h1 id="替换内容"><a href="#替换内容" class="headerlink" title="替换内容"></a>替换内容</h1><p><code>replace()</code>函数在字符串中用某些字符替换另一些字符</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> javaScript </category>
+          
+          <category> javaScript入门 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript入门笔记（五）事件</title>
+      <link href="/2022/08/21/JavaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%94%EF%BC%89%E4%BA%8B%E4%BB%B6/"/>
+      <url>/2022/08/21/JavaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%94%EF%BC%89%E4%BA%8B%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<h1 id="HTML事件"><a href="#HTML事件" class="headerlink" title="HTML事件"></a>HTML事件</h1><blockquote><p>包括浏览器行为和用户行为</p><ul><li>HTML页面加载完成</li><li>HTML<code>input</code>字段改变</li><li>HTML按钮被点击</li><li>etc</li></ul></blockquote><p>常见HTML事件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">onchange<span class="comment">//HTML元素改变</span></span><br><span class="line">onclick<span class="comment">//用户点击HTML元素</span></span><br><span class="line">onmouseover<span class="comment">//鼠标悬停</span></span><br><span class="line">onmouseout<span class="comment">//鼠标移开</span></span><br><span class="line">onkeydown<span class="comment">//用户按下键盘按键</span></span><br><span class="line">onload<span class="comment">//浏览器页面加载完成</span></span><br></pre></td></tr></table></figure></p><h1 id="javaScript作用"><a href="#javaScript作用" class="headerlink" title="javaScript作用"></a>javaScript作用</h1><p>javascript可以在事件发生时执行动作</p><blockquote><p>前提是在<code>HTML</code>元素中添加事件属性</p></blockquote><ul><li>页面加载或关闭时触发事件</li><li>用户点击按钮执行动作</li><li>验证输入内容合法性</li><li>etc</li></ul><h1 id="小例子"><a href="#小例子" class="headerlink" title="小例子"></a>小例子</h1><p>通过用户点击显示时间</p><blockquote><p>预览里的文字得点一下</p></blockquote><div class="tabs" id="样例"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#样例-1">代码</button></li><li class="tab"><button type="button" data-href="#样例-2">预览</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="样例-1"><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;displayDate() &quot;</span>&gt;</span>点这里<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">displayDate</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;demo&quot;</span>).<span class="property">innerHTML</span>=<span class="title class_">Date</span>();</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;demo&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="样例-2"><p><button onclick="displayDate() ">点这里</button><br>    <script>    function displayDate(){        document.getElementById("demo").innerHTML=Date();    }    </script><br>    <p id="demo"></p></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> javaScript </category>
+          
+          <category> javaScript入门 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>javaScript入门笔记（四）函数</title>
+      <link href="/2022/08/21/javaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89%E5%87%BD%E6%95%B0/"/>
+      <url>/2022/08/21/javaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89%E5%87%BD%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="函数语法"><a href="#函数语法" class="headerlink" title="函数语法"></a>函数语法</h1><blockquote><p>关键字<code>function</code>必须小写<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">functionName</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="comment">//执行代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="带参函数"><a href="#带参函数" class="headerlink" title="带参函数"></a>带参函数</h2></blockquote><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">functionName</span>(<span class="params">var1,var2</span>)&#123;</span><br><span class="line">    <span class="comment">//执行代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="带返回值的函数"><a href="#带返回值的函数" class="headerlink" title="带返回值的函数"></a>带返回值的函数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myFunction</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> x=<span class="number">5</span>;</span><br><span class="line">    <span class="keyword">return</span> x; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>可以返回表达式</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myFunction</span>(<span class="params">a,b</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> a*b; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>可以用于退出函数</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myFunction</span>(<span class="params">a,b</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(a&gt;b)&#123;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="局部变量与全局变量"><a href="#局部变量与全局变量" class="headerlink" title="局部变量与全局变量"></a>局部变量与全局变量</h1><h2 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h2><ul><li>函数内部声明的变量（使用 var）是局部变量，所以只能在函数内部访问它</li><li>不同函数可以使用名称相同的局部变量</li><li>生存周期为声明开始到函数运行后被删除</li></ul><h2 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h2><ul><li>函数外部声明的变量是全局变量，网页上的所有脚本和函数都能访问它</li><li>生存周期为声明开始到页面关闭后被删除</li></ul><blockquote><p>把值赋给未声明变量将自动作为全局变量的一个可配置属性（即使是在函数内声明）</p></blockquote><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> var1 = <span class="number">1</span>; <span class="comment">// 不可配置全局属性</span></span><br><span class="line">var2 = <span class="number">2</span>; <span class="comment">// 没有使用 var 声明，可配置全局属性</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">var1</span>); <span class="comment">// 1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">window</span>.<span class="property">var1</span>); <span class="comment">// 1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">window</span>.<span class="property">var2</span>); <span class="comment">// 2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> var1; <span class="comment">// false 无法删除</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(var1); <span class="comment">//1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> var2; </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">delete</span> var2); <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(var2); <span class="comment">// 已经删除 报错变量未定义</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> javaScript </category>
+          
+          <category> javaScript入门 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo + Butterfly 建站记录（一）日常写作</title>
       <link href="/2022/08/20/Hexo%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95%EF%BC%88%E4%B8%80%EF%BC%89%E6%97%A5%E5%B8%B8%E5%86%99%E4%BD%9C/"/>
       <url>/2022/08/20/Hexo%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95%EF%BC%88%E4%B8%80%EF%BC%89%E6%97%A5%E5%B8%B8%E5%86%99%E4%BD%9C/</url>
@@ -40,6 +121,8 @@
       
       <categories>
           
+          <category> javaScript </category>
+          
           <category> javaScript入门 </category>
           
       </categories>
@@ -65,6 +148,8 @@
       
       <categories>
           
+          <category> javaScript </category>
+          
           <category> javaScript入门 </category>
           
       </categories>
@@ -89,6 +174,8 @@
       
       
       <categories>
+          
+          <category> javaScript </category>
           
           <category> javaScript入门 </category>
           
