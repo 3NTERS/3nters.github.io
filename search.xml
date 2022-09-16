@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>关于cd指令</title>
+      <link href="/2022/09/16/%E5%85%B3%E4%BA%8Ecd%E6%8C%87%E4%BB%A4/"/>
+      <url>/2022/09/16/%E5%85%B3%E4%BA%8Ecd%E6%8C%87%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<p>起因是安装<code>Vue</code>时要用到<code>cd</code>指令然而我早就忘了…现在记录在博客，以后再忘记就看看</p><h1 id="cd指令的使用"><a href="#cd指令的使用" class="headerlink" title="cd指令的使用"></a>cd指令的使用</h1><ul><li>回到根目录 <code>cd/</code></li><li>回到上一层目录 <code>cd..</code></li><li>进入任意目录<br>方法一：<br>(1)直接输入<code>[目录盘位]</code>如<code>D:</code><br>(2)输入<code>cd [目录相对路径]</code>如<code>cd Vue项目\Hello-world</code><br><img src="https://c2.im5i.com/2022/09/16/HSYqd.png" alt="HSYqd.png"><br>方法二：<br>输入<code>cd /d[目录绝对路径]</code><br><img src="https://c2.im5i.com/2022/09/16/HS9AR.png" alt="HS9AR.png"></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机基础知识 </category>
+          
+          <category> cd指令 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> cd指令 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JavaScript入门笔记（十一）异步编程</title>
       <link href="/2022/09/05/JavaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0%EF%BC%88%E5%8D%81%E4%B8%80%EF%BC%89%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/"/>
       <url>/2022/09/05/JavaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0%EF%BC%88%E5%8D%81%E4%B8%80%EF%BC%89%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/</url>
