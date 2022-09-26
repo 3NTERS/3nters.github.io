@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>Vue入门笔记（三）计算属性</title>
+      <link href="/2022/09/26/Vue%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7/"/>
+      <url>/2022/09/26/Vue%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+          <category> Vue入门 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Vue入门笔记（二）模板语法</title>
+      <link href="/2022/09/26/Vue%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/"/>
+      <url>/2022/09/26/Vue%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="模板语法"><a href="#模板语法" class="headerlink" title="模板语法"></a>模板语法</h1><p>Vue使用基于<code>html</code>的模板语法，允许将<code>DOM</code>绑定到底层<code>Vue</code>实例的数据</p><h2 id="文本插值"><a href="#文本插值" class="headerlink" title="文本插值"></a>文本插值</h2><p>双大括号语法文本插值 (<code>Mustache</code>)</p><ul><li>插数据<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>message:&#123;&#123;msg&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 绑定v-once，一次性插值，不会再变化 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">v-once</span>&gt;</span>这个将不会改变：&#123;&#123;msg&#125;&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure></li><li>插<code>HTML</code>代码<br>原始<code>HTML</code> 双括号会解释为普通文本而不是<code>HTML</code>代码，输出真正的<code>HTML</code>需要<code>v-html</code>指令 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Using mustaches:&#123;&#123;rawHtml&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Using v-html idrective:<span class="tag">&lt;<span class="name">span</span> <span class="attr">v-html</span>=<span class="string">&quot;rawHtml&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></li></ul><h2 id="HTML属性-Attribute-绑定"><a href="#HTML属性-Attribute-绑定" class="headerlink" title="HTML属性(Attribute)绑定"></a>HTML属性(Attribute)绑定</h2><p>  <code>Attribute mustache</code>语法不能作用在<code>HTML attribute</code>上，这时候要用<code>v-bind</code>指令动态绑定<code>id</code><br>  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:id</span>=<span class="string">&quot;dynamicId&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- dynamicId`为变量) --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-bind:disabled</span>=<span class="string">&quot;isButtonDisabled&quot;</span>&gt;</span>Button<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></p><ul><li><code>js</code>表达式支持<br>使用<code>javaScript</code>表达式 对于所有数据的绑定<code>vue.js</code>都提供了完全的<code>js</code>表达式支持<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;number+1&#125;&#125;<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">&#123;&#123;ok?&#x27;Yes&#x27;:&#x27;No&#x27;&#125;&#125;<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">&#123;&#123;message.split(&#x27;&#x27;).reverse().join(&#x27;&#x27;)&#125;&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-bind:id</span>=<span class="string">&quot;&#x27;list-&#x27;+dynamicId&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><blockquote><p>但不支持js语句和条件控制 （也就是包含关键字的语句），如<code>var</code>、<code>if</code>、<code>return</code>等</p></blockquote></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+          <category> Vue入门 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vue入门笔记（一）Vscode搭建Vue项目及项目结构说明</title>
       <link href="/2022/09/16/%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89Vscode%E6%90%AD%E5%BB%BAVue%E9%A1%B9%E7%9B%AE%E5%8F%8A%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E8%AF%B4%E6%98%8E/"/>
       <url>/2022/09/16/%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89Vscode%E6%90%AD%E5%BB%BAVue%E9%A1%B9%E7%9B%AE%E5%8F%8A%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E8%AF%B4%E6%98%8E/</url>
