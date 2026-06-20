@@ -8,12 +8,18 @@ type: "optimize"
 {% timeline 2026 %}
 
 <!-- timeline 06-20 -->
-升级nodejs后修复:
+升级nodejs后:
+
  - pages顶部图片透明  
+
  - 整体footer透明 
+
  - 优化页面信息栏错位(标签用错后的渲染错误)
-<!-- endtimeline -->
-{% endtimeline %}
+
+ - 修复评论区不能用的问题
+
+  <!-- endtimeline -->
+  {% endtimeline %}
 
 {% timeline 2022 %}
 
@@ -53,7 +59,8 @@ type: "optimize"
     ​	若要更换为彩色鱼则将src改为
     
     ​	`src="https://uuuuu.cf/js/fishes.js"` 
-    ​	{% endhideToggle %} 
+    
+    {% endhideToggle %} 
     
 - 配置vscode代码块代码
 

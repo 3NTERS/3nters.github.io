@@ -347,7 +347,7 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: https://3nters.github.io
+  envId: https://twikooproject.netlify.app/.netlify/functions/twikoo
   region: ap-Hangzhou
   visitor: false
   option:
@@ -854,7 +854,7 @@ inject:
   bottom: 
     - <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 
-      <div class="aplayer no-destroy" data-id="3232190217" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-mini="true"> </div>
+      <div class="aplayer no-destroy" data-id="3232190217" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-mini="true"> </div>
 
     # 未开启pjax
     # - <script src="https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fishes.js"></script>
