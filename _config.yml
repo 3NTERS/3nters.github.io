@@ -104,7 +104,7 @@ theme: butterfly
 deploy:
   type: git
   repository: https://github.com/3NTERS/3NTERS.github.io
-  branch: main
+  branch: master
 
 # music
 aplayer:
