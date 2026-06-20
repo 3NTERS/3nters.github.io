@@ -1,0 +1,12 @@
+/* 强制将顶部导航和页脚背景设为透明 */
+#page-header,
+#page-header:before,
+#footer:before {
+    background: transparent !important;
+}
+
+如果你希望文章卡片也呈现透明效果，可以加上这段
+#recent-posts > .recent-post-item,
+#aside-content .card-widget {
+    background: rgba(255, 255, 255, 0.8); /* 0.8代表80%的透明度，可根据喜好调整 */
+}
