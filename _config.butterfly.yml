@@ -797,6 +797,7 @@ pjax:
 aplayerInject:
   enable: true
   per_page: true
+  
 
 # Snackbar (Toast Notification 彈窗)
 # https://github.com/polonel/SnackBar
@@ -852,9 +853,9 @@ inject:
     <link rel="stylesheet" href="/css/my.css">
     # - <link rel="stylesheet" href="">
   bottom: 
-    - <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    # - <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 
-      <div class="aplayer no-destroy" data-id="3232190217" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-mini="true"> </div>
+    - <div class="aplayer no-destroy" data-id="141706869" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-mini="true" data-lrc-type="0"> </div>
 
     # 未开启pjax
     # - <script src="https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fishes.js"></script>
