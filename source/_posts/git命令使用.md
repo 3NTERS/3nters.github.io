@@ -61,7 +61,41 @@ tags:
 
 ## 分支
 
-`git checkout -b dev` 创建名为`dev`分支 
+`git checkout -b dev origin/dev` 创建名为`dev`分支并切换 
+
+git branch 查询所在分支
+
+## 设置代理
+
+> 打开代理同时查询端口写进去 
+
+- 设置全局代理
+
+`git config --global http.proxy http://127.0.0.1:7897`
+
+`git config --global http.proxy http://127.0.0.1:7897`
+
+- 针对github单独设置代理
+
+`git config --global http.https://github.com.proxy socks5://127.0.0.1:7897`
+
+- 临时设置代理克隆仓库
+
+`git -c http.proxy=socks5://127.0.0.1:10808 clone https://github.com/username/repo.git`
+
+- 临时使用代理推送代码
+
+`git -c http.proxy=socks5://127.0.0.1:10808 push`
+
+- 取消全局代理
+
+`git config --global --unset http.proxy`
+
+`git config --global --unset https.proxy`
+
+- 取消针对 GitHub 的代理
+
+`git config --global --unset http.https://github.com.proxy`
 
 ## 常用commit类型
 
