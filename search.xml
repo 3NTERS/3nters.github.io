@@ -1215,4 +1215,17 @@ RJ45淘宝任意款（不带灯）
         <tag>精力回复</tag>
       </tags>
   </entry>
+  <entry>
+    <title>hexo多设备协同编辑</title>
+    <url>/2026/06/20/hexo%E5%A4%9A%E8%AE%BE%E5%A4%87%E5%8D%8F%E5%90%8C%E7%BC%96%E8%BE%91/</url>
+    <content><![CDATA[Nodejs版本不同电脑的nodejs版本不同，不知道git pull之后用了新版本的nodejs会不会影响部署
+]]></content>
+      <categories>
+        <category>Hexo + Butterfly 建站记录</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>多设备协同</tag>
+      </tags>
+  </entry>
 </search>
