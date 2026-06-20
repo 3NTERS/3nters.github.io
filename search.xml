@@ -1139,7 +1139,14 @@ typora-root-url: &#123;&#123; title &#125;&#125;
 
 post模板文件中加入图片根目录，让![example](./example.png)实际变成![example](./title/example.png)
 
-修复背景不透明]]></content>
+修复背景不透明
+设置主页背景与全站页脚为透明
+
+source新建css文件夹，创建my.css后如下设置
+/* 强制将顶部导航和页脚背景设为透明 */#page-header.full_page &#123;    background: transparent !important;&#125;#footer &#123;    background: transparent !important;&#125;
+
+因为查看主页header属性为&lt;class=&quot;full_page&quot; id=&quot;page-header&quot;&gt;而文章header则是&lt;class=&quot;post-page&quot; id=“page-header”&gt;所以css直接根据属性来设置了。
+]]></content>
       <categories>
         <category>Hexo + Butterfly 建站记录</category>
       </categories>
