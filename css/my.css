@@ -2,6 +2,9 @@
 #page-header.full_page {
     background: transparent !important;
 }
+#page-header.not-home-page {
+    background: transparent !important;
+}
 /* #page-header:before, */
 #footer {
     background: transparent !important;
