@@ -1,6 +1,6 @@
 ---
-title: 逆向安卓软件并接触VIP会员权限
-typora-root-url: 逆向安卓软件并接触VIP会员权限
+title: 逆向安卓软件并解除VIP会员权限
+typora-root-url: 逆向安卓软件并解除VIP会员权限
 date: 2026-06-20 21:37:28
 categories: 逆向工程
 tags:
