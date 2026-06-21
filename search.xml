@@ -1448,4 +1448,70 @@ RJ45淘宝任意款（不带灯）
         <tag>精力回复</tag>
       </tags>
   </entry>
+  <entry>
+    <title>逆向安卓软件并接触VIP会员权限</title>
+    <url>/2026/06/20/%E9%80%86%E5%90%91%E5%AE%89%E5%8D%93%E8%BD%AF%E4%BB%B6%E5%B9%B6%E6%8E%A5%E8%A7%A6VIP%E4%BC%9A%E5%91%98%E6%9D%83%E9%99%90/</url>
+    <content><![CDATA[ApkTool
+解包安卓安装包的基础工具
+
+
+安装java环境
+
+设置到环境变量
+
+github下载并安装iBotPeaches&#x2F;Apktool: A tool for reverse engineering Android apk files
+
+开始解包APK安装包
+
+
+java -jar .\apktool_3.0.2.jar d D:\Workspace\Andriod\moneyReverse\base.apk -o D:\Workspace\Andriod\moneyReverse\test
+
+调用apktool工具将base.apk解包到test文件夹，通过解包后的smali文件可以看出函数逻辑
+
+Jadx
+用于逆向smali文件为java文件，更便于分析逻辑
+
+
+gui且带jre环境的版本无需过多解释，拖进去直接解包
+
+
+
+牛大了！直接解包成Java项目，里面每一条代码都清晰可读（除了so文件），用Android SDK开发更是舒服
+
+显然，比APKTool解包出来的结构要清晰多了。
+
+
+IDA Pro
+反编译成汇编，可读性一般但也能读
+
+Sandboxie-Plus
+经典国产软件装沙箱防流氓
+
+
+夸克是真沙避啊在D盘创建个ProgramData塞他喵的VedioCache，设置为C盘创建也无效那你给我这个设置干嘛？？进沙箱吧孩子……
+
+解包分析过程
+用Jadx解为Java项目后可读性好很多，于是直接file搜索”双紫擒龙“这个功能，发现其实际为 “追踪主力”即SKILL_ZLZZ
+
+顺着往下摸到了NewIndexMathTool.java这个整合指标和数据的库文件
+
+于是让Copilot帮我分析完整个SKILL_ZLZZ计算流程
+
+
+至此就挖到了这个指标的计算公式，由于计算指标所需要的数据普通用户也可以获取，所以接下来想用这个功能就得解除VIP权限来显示了。
+
+通过isVip关键词查找验证逻辑（待完成）
+
+
+]]></content>
+      <categories>
+        <category>逆向工程</category>
+      </categories>
+      <tags>
+        <tag>jadx</tag>
+        <tag>apktool</tag>
+        <tag>Android</tag>
+        <tag>java</tag>
+      </tags>
+  </entry>
 </search>
