@@ -18,6 +18,8 @@ type: "optimize"
 
  - 修复评论区不能用的问题
 
+ - 关闭底部播放器歌词并更新了歌单
+
   <!-- endtimeline -->
   {% endtimeline %}
 
