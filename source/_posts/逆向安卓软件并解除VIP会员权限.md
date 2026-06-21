@@ -29,7 +29,7 @@ java -jar .\apktool_3.0.2.jar d D:\Workspace\Andriod\moneyReverse\base.apk -o D:
 
 调用`apktool`工具将`base.apk`解包到`test`文件夹，通过解包后的smali文件可以看出函数逻辑
 
-![image-20260621090827042](/image-20260621090827042.png)
+![image-20260621090827042](./image-20260621090827042.png)
 
 # Jadx
 
@@ -37,11 +37,11 @@ java -jar .\apktool_3.0.2.jar d D:\Workspace\Andriod\moneyReverse\base.apk -o D:
 
 - `gui`且带`jre`环境的版本无需过多解释，拖进去直接解包
 
-![image-20260620235256559](/image-20260620235256559.png)
+![image-20260620235256559](./image-20260620235256559.png)
 
 - 牛大了！直接解包成`Java`项目，里面每一条代码都清晰可读（除了`so`文件），用`Android SDK`开发更是舒服
 
-  ![image-20260621090915614](/image-20260621090915614.png)
+  ![image-20260621090915614](./image-20260621090915614.png)
 
   显然，比`APKTool`解包出来的结构要清晰多了。
 
@@ -62,7 +62,7 @@ java -jar .\apktool_3.0.2.jar d D:\Workspace\Andriod\moneyReverse\base.apk -o D:
 
 - 于是让Copilot帮我分析完整个`SKILL_ZLZZ`计算流程
 
-  ![image-20260621093659651](/image-20260621093659651.png)
+  ![image-20260621093659651](./image-20260621093659651.png)
 
 - 至此就挖到了这个指标的计算公式，由于计算指标所需要的数据普通用户也可以获取，所以接下来想用这个功能就得解除`VIP`权限来显示了。
 - 通过`isVip`关键词查找验证逻辑（待完成）
