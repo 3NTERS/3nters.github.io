@@ -39,6 +39,16 @@ tags:
 
 `git pull`
 
+`git fetch` 自动拉取远端最新到本地，不会自动合并分支
+
+`git fetch -p` 
+
+`git stash` 临时保存在暂存区和已追踪的文件，一般是写一半没法直接提交改动然后又要拉取其他分支的时候用
+
+`git stash push 文件名` 暂存某一个文件 
+
+`git stash pop` 释放临时在暂存区和已追踪的文件
+
 ## 版本控制
 
 `git log`
@@ -58,6 +68,8 @@ tags:
 `git diff HEAD~1 HEAD -- predict3_onnx.py`  对比上次提交与上上次提交的文件变化
 
 `git diff HEAD -- predict3_onnx.py`  对比当前修改与上次提交的文件变化
+
+`git restore 文件名` 恢复文件到最新的拉取状态  
 
 ## 分支
 
