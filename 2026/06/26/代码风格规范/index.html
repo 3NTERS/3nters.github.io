@@ -1,17 +1,17 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>代码风格规范 | 网络边缘</title><meta name="keywords" content="代码规范"><meta name="author" content="3nters"><meta name="copyright" content="3nters"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Python最近在写一个项目的图像识别功能，整体需求变化为识别光伏板螺钉孔位 &gt; &gt; 识别手电钻抓取点 &gt;&gt; 识别手电钻钻头位置 整个过程中除了学习如何对需求进行解构还学习到如何写出 可读性强、结构规范、功能完善 的代码。 项目结构一个完整的项目结构应该如下，此处我以其中识别光伏板螺钉孔位为例子  Panel_screws_detect  src  detector  _i">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>代码风格规范 | 网络边缘</title><meta name="keywords" content="代码规范"><meta name="author" content="3nters"><meta name="copyright" content="3nters"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Python最近在写一个项目的图像识别功能，整体需求变化为识别光伏板螺钉孔位 &gt;&gt; 识别手电钻抓取点 &gt;&gt; 识别手电钻钻头位置 整个过程中除了学习如何对需求进行解构还学习到如何写出 可读性强、结构规范、功能完善 的代码。 项目结构一个完整的项目结构应该如下，此处我以其中识别光伏板螺钉孔位为例子 Panel_screws_detect  src  detector  __in">
 <meta property="og:type" content="article">
 <meta property="og:title" content="代码风格规范">
 <meta property="og:url" content="http://example.com/2026/06/26/%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC%E8%A7%84%E8%8C%83/index.html">
 <meta property="og:site_name" content="网络边缘">
-<meta property="og:description" content="Python最近在写一个项目的图像识别功能，整体需求变化为识别光伏板螺钉孔位 &gt; &gt; 识别手电钻抓取点 &gt;&gt; 识别手电钻钻头位置 整个过程中除了学习如何对需求进行解构还学习到如何写出 可读性强、结构规范、功能完善 的代码。 项目结构一个完整的项目结构应该如下，此处我以其中识别光伏板螺钉孔位为例子  Panel_screws_detect  src  detector  _i">
+<meta property="og:description" content="Python最近在写一个项目的图像识别功能，整体需求变化为识别光伏板螺钉孔位 &gt;&gt; 识别手电钻抓取点 &gt;&gt; 识别手电钻钻头位置 整个过程中除了学习如何对需求进行解构还学习到如何写出 可读性强、结构规范、功能完善 的代码。 项目结构一个完整的项目结构应该如下，此处我以其中识别光伏板螺钉孔位为例子 Panel_screws_detect  src  detector  __in">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://picgo-imgbed.oss-cn-hangzhou.aliyuncs.com/images/20240715193050.png">
+<meta property="og:image" content="https://picgo-imgbed.oss-cn-hangzhou.aliyuncs.com/images/20240715181846.png">
 <meta property="article:published_time" content="2026-06-25T17:01:47.000Z">
-<meta property="article:modified_time" content="2026-06-25T18:04:55.340Z">
+<meta property="article:modified_time" content="2026-06-26T00:09:51.642Z">
 <meta property="article:author" content="3nters">
 <meta property="article:tag" content="代码规范">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://picgo-imgbed.oss-cn-hangzhou.aliyuncs.com/images/20240715193050.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2026/06/26/%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC%E8%A7%84%E8%8C%83/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://picgo-imgbed.oss-cn-hangzhou.aliyuncs.com/images/20240715181846.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2026/06/26/%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC%E8%A7%84%E8%8C%83/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
@@ -53,7 +53,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2026-06-26 02:04:55'
+  postUpdate: '2026-06-26 08:09:51'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -133,99 +133,95 @@
       }
     }
     detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/my.css"><meta name="generator" content="Hexo 6.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/Todo/"><i class="fa-fw fas fa-clock"></i><span> ToDo</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 推荐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/optimize/"><i class="fa-fw fas fa-cat"></i><span> 优化</span></a></div><div class="menus_item"><a class="site-page" href="/document/"><i class="fa-fw fas fa-box"></i><span> 文档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://picgo-imgbed.oss-cn-hangzhou.aliyuncs.com/images/20240715193050.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">网络边缘</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/Todo/"><i class="fa-fw fas fa-clock"></i><span> ToDo</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 推荐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/optimize/"><i class="fa-fw fas fa-cat"></i><span> 优化</span></a></div><div class="menus_item"><a class="site-page" href="/document/"><i class="fa-fw fas fa-box"></i><span> 文档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">代码风格规范</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-06-25T17:01:47.000Z" title="发表于 2026-06-26 01:01:47">2026-06-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-06-25T18:04:55.340Z" title="更新于 2026-06-26 02:04:55">2026-06-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">计算机基础知识</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">372</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="代码风格规范"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><p>最近在写一个项目的图像识别功能，整体需求变化为<code>识别光伏板螺钉孔位</code> &gt; &gt; <code>识别手电钻抓取点</code> &gt;&gt; <code>识别手电钻钻头位置</code></p>
+    })(window)</script><link rel="stylesheet" href="/css/my.css"><meta name="generator" content="Hexo 6.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/Todo/"><i class="fa-fw fas fa-clock"></i><span> ToDo</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 推荐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/optimize/"><i class="fa-fw fas fa-cat"></i><span> 优化</span></a></div><div class="menus_item"><a class="site-page" href="/document/"><i class="fa-fw fas fa-box"></i><span> 文档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://picgo-imgbed.oss-cn-hangzhou.aliyuncs.com/images/20240715181846.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">网络边缘</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/Todo/"><i class="fa-fw fas fa-clock"></i><span> ToDo</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 推荐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/optimize/"><i class="fa-fw fas fa-cat"></i><span> 优化</span></a></div><div class="menus_item"><a class="site-page" href="/document/"><i class="fa-fw fas fa-box"></i><span> 文档</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">代码风格规范</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-06-25T17:01:47.000Z" title="发表于 2026-06-26 01:01:47">2026-06-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-06-26T00:09:51.642Z" title="更新于 2026-06-26 08:09:51">2026-06-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">计算机基础知识</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">372</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="代码风格规范"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><p>最近在写一个项目的图像识别功能，整体需求变化为<code>识别光伏板螺钉孔位</code> &gt;&gt; <code>识别手电钻抓取点</code> &gt;&gt; <code>识别手电钻钻头位置</code></p>
 <p>整个过程中除了学习如何对需求进行解构还学习到如何写出 <code>可读性强、结构规范、功能完善</code> 的代码。</p>
 <h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p>一个完整的项目结构应该如下，此处我以其中识别光伏板螺钉孔位为例子</p>
+<p><code>Panel_screws_detect</code></p>
 <ul>
-<li><p>Panel_screws_detect</p>
+<li><p><code>src</code></p>
 <ul>
-<li><p>src</p>
+<li><p><code>detector</code></p>
 <ul>
-<li><p>detector</p>
+<li><code>__init__.py</code> </li>
+<li><code>yolo_detector.py</code> # YOLO 推理封装</li>
+<li><code>postprocess.py</code> # 后处理（如 NMS、坐标恢复）</li>
+<li><code>results.py</code> # 检测结果封装</li>
+</ul>
 </li>
-<li><p>_<em>init</em>_.py </p>
-</li>
-<li><p>yolo_detector.py # YOLO 推理封装</p>
-</li>
-<li><p>postprocess.py # 后处理（如 NMS、坐标恢复）</p>
-</li>
-<li><p>results.py # 检测结果封装</p>
-</li>
-<li><p>common</p>
+<li><p><code>common</code></p>
 <ul>
-<li><p>_<em>init</em>_.py </p>
+<li><p><code>__init__.py</code> </p>
 </li>
-<li><p>paths.py  # 项目所用文件夹路径</p>
+<li><p><code>paths.py</code> # 项目所用文件夹路径</p>
 <blockquote>
 <p>ROOT_DIR DATA_DIR MODEL_DIR OUTPUT_DIR CONFIG_DIR</p>
 </blockquote>
 </li>
-<li><p>config.py # 读取config文件</p>
+<li><p><code>config.py</code> # 读取config文件</p>
 </li>
 </ul>
 </li>
-<li><p>utils</p>
+<li><p><code>utils</code></p>
 <ul>
-<li>_<em>init</em>_.py </li>
-<li>file_utils.py # 读取文件、写入文件、查找文件夹不同文件</li>
-<li>image_utils.py # 图像处理相关，如图像等比缩放变换</li>
-<li>math_utils.py # 数学处理相关，如坐标变换还原、NMS 非极大值抑制</li>
+<li><code>__init__.py</code> </li>
+<li><code>file_utils.py</code> # 读取文件、写入文件、查找文件夹不同文件</li>
+<li><code>image_utils.py</code> # 图像处理相关，如图像等比缩放变换</li>
+<li><code>math_utils.py</code> # 数学处理相关，如坐标变换还原、NMS 非极大值抑制</li>
 </ul>
 </li>
-<li><p>visualization</p>
+<li><p><code>visualization</code></p>
 <ul>
-<li>_<em>init</em>_.py </li>
-<li>plot_labels_scores.py</li>
+<li><code>__init__.py</code> </li>
+<li><code>plot_labels_scores.py</code></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>config</p>
+<li><p><code>config</code></p>
 <ul>
-<li><p>data.yaml  # 训练设置的数据格式存储地址等</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">path: .  <span class="comment"># 数据集根目录</span></span><br><span class="line">train: train/images</span><br><span class="line">val: val/images</span><br><span class="line"></span><br><span class="line"><span class="comment"># 类别字典 (Class 0 是光伏板，Class 1 是螺钉)</span></span><br><span class="line">names:</span><br><span class="line">  <span class="number">0</span>: solar_panel</span><br><span class="line">  <span class="number">1</span>: screw</span><br></pre></td></tr></table></figure></li>
+<li><p><code>data.yaml</code>  # 训练设置的数据格式存储地址等</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">path: .  <span class="comment"># 数据集根目录</span></span><br><span class="line">train: train/images</span><br><span class="line">val: val/images</span><br><span class="line"></span><br><span class="line"><span class="comment"># 类别字典 (Class 0 是光伏板，Class 1 是螺钉)</span></span><br><span class="line">names:</span><br><span class="line">  <span class="number">0</span>: solar_panel</span><br><span class="line">  <span class="number">1</span>: screw</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li><p>weights</p>
+<li><p><code>weights</code></p>
 <ul>
-<li>best.pt</li>
-<li>yolov11n.pt</li>
-<li>best.onnx</li>
+<li><code>best.pt</code></li>
+<li><code>yolov11n.pt</code></li>
+<li><code>best.onnx</code></li>
 </ul>
 </li>
-<li><p>data</p>
+<li><p><code>data</code></p>
 <ul>
-<li>images</li>
-<li>labels</li>
+<li><code>images</code></li>
+<li><code>labels</code></li>
 </ul>
 </li>
-<li><p>Tests</p>
+<li><p><code>Tests</code></p>
 <ul>
-<li>_<em>init</em>_.py </li>
-<li>test_predict.py</li>
-<li>test_predict_onnx.py</li>
+<li><code>__init__.py</code> </li>
+<li><code>test_predict.py</code></li>
+<li><code>test_predict_onnx.py</code></li>
 </ul>
 </li>
-<li><p>Outputs</p>
+<li><p><code>Outputs</code></p>
 <ul>
-<li>result.jpg</li>
+<li><code>result.jpg</code></li>
 </ul>
 </li>
-<li><p>Scripts</p>
+<li><p>Scripts``</p>
 <ul>
-<li>_<em>init</em>_.py <ul>
-<li>train.py</li>
-<li>predict.py</li>
-<li>split_dataset.py # 将标注好的数据分为训练集与验证集，文件只包含路径不用复制原始<code>images</code>与<code>labels</code></li>
-<li>screws_annotation.py # 用于打标并导出标签</li>
+<li><code>__init__.py</code> <ul>
+<li><code>train.py</code></li>
+<li><code>predict.py</code></li>
+<li><code>split_dataset.py</code> # 将标注好的数据分为训练集与验证集，文件只包含路径不用复制原始<code>images</code>与<code>labels</code></li>
+<li><code>screws_annotation.py</code> # 用于打标并导出标签</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">代码规范</a></div><div class="post_share"><div class="social-share" data-image="https://picgo-imgbed.oss-cn-hangzhou.aliyuncs.com/images/20240715193050.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2026/06/20/%E9%80%86%E5%90%91%E5%AE%89%E5%8D%93%E8%BD%AF%E4%BB%B6%E5%B9%B6%E8%A7%A3%E9%99%A4VIP%E4%BC%9A%E5%91%98%E6%9D%83%E9%99%90/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picgo-imgbed.oss-cn-hangzhou.aliyuncs.com/images/20240715193021.png" onerror="onerror=null;src='https://picgo-imgbed.oss-cn-hangzhou.aliyuncs.com/images/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">逆向安卓软件并解除VIP会员权限</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python"><span class="toc-number">1.</span> <span class="toc-text">Python</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-number">1.1.</span> <span class="toc-text">项目结构</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('https://picgo-imgbed.oss-cn-hangzhou.aliyuncs.com/images/20240715193050.png')"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2026 By 3nters</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/">代码规范</a></div><div class="post_share"><div class="social-share" data-image="https://picgo-imgbed.oss-cn-hangzhou.aliyuncs.com/images/20240715181846.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2026/06/20/%E9%80%86%E5%90%91%E5%AE%89%E5%8D%93%E8%BD%AF%E4%BB%B6%E5%B9%B6%E8%A7%A3%E9%99%A4VIP%E4%BC%9A%E5%91%98%E6%9D%83%E9%99%90/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picgo-imgbed.oss-cn-hangzhou.aliyuncs.com/images/20240715193021.png" onerror="onerror=null;src='https://picgo-imgbed.oss-cn-hangzhou.aliyuncs.com/images/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">逆向安卓软件并解除VIP会员权限</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python"><span class="toc-number">1.</span> <span class="toc-text">Python</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-number">1.1.</span> <span class="toc-text">项目结构</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('https://picgo-imgbed.oss-cn-hangzhou.aliyuncs.com/images/20240715181846.png')"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2026 By 3nters</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")

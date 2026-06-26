@@ -1523,29 +1523,26 @@ Sandboxie-Plus
   <entry>
     <title>代码风格规范</title>
     <url>/2026/06/26/%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC%E8%A7%84%E8%8C%83/</url>
-    <content><![CDATA[Python最近在写一个项目的图像识别功能，整体需求变化为识别光伏板螺钉孔位 &gt; &gt; 识别手电钻抓取点 &gt;&gt; 识别手电钻钻头位置
+    <content><![CDATA[Python最近在写一个项目的图像识别功能，整体需求变化为识别光伏板螺钉孔位 &gt;&gt; 识别手电钻抓取点 &gt;&gt; 识别手电钻钻头位置
 整个过程中除了学习如何对需求进行解构还学习到如何写出 可读性强、结构规范、功能完善 的代码。
 项目结构一个完整的项目结构应该如下，此处我以其中识别光伏板螺钉孔位为例子
-
 Panel_screws_detect
 
 src
 
 detector
 
-_init_.py 
-
+__init__.py 
 yolo_detector.py # YOLO 推理封装
-
 postprocess.py # 后处理（如 NMS、坐标恢复）
-
 results.py # 检测结果封装
+
 
 common
 
-_init_.py 
+__init__.py 
 
-paths.py  # 项目所用文件夹路径
+paths.py # 项目所用文件夹路径
 
 ROOT_DIR DATA_DIR MODEL_DIR OUTPUT_DIR CONFIG_DIR
 
@@ -1556,7 +1553,7 @@ config.py # 读取config文件
 
 utils
 
-_init_.py 
+__init__.py 
 file_utils.py # 读取文件、写入文件、查找文件夹不同文件
 image_utils.py # 图像处理相关，如图像等比缩放变换
 math_utils.py # 数学处理相关，如坐标变换还原、NMS 非极大值抑制
@@ -1564,7 +1561,7 @@ math_utils.py # 数学处理相关，如坐标变换还原、NMS 非极大值抑
 
 visualization
 
-_init_.py 
+__init__.py 
 plot_labels_scores.py
 
 
@@ -1574,6 +1571,7 @@ config
 
 data.yaml  # 训练设置的数据格式存储地址等
 path: .  # 数据集根目录train: train/imagesval: val/images# 类别字典 (Class 0 是光伏板，Class 1 是螺钉)names:  0: solar_panel  1: screw
+
 
 
 weights
@@ -1591,7 +1589,7 @@ labels
 
 Tests
 
-_init_.py 
+__init__.py 
 test_predict.py
 test_predict_onnx.py
 
@@ -1601,15 +1599,13 @@ Outputs
 result.jpg
 
 
-Scripts
+Scripts``
 
-_init_.py 
+__init__.py 
 train.py
 predict.py
 split_dataset.py # 将标注好的数据分为训练集与验证集，文件只包含路径不用复制原始images与labels
 screws_annotation.py # 用于打标并导出标签
-
-
 
 
 
