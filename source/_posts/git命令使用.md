@@ -49,6 +49,11 @@ tags:
 
 `git stash pop` 释放临时在暂存区和已追踪的文件
 
+## 上传忽略/保留文件
+
+- `.gitignore`
+- `.gitkeep`
+
 ## 版本控制
 
 `git log`
@@ -97,7 +102,7 @@ git branch 查询所在分支
 
 - 临时使用代理推送代码
 
-`git -c http.proxy=socks5://127.0.0.1:10808 push`
+`git -c http.proxy=socks5://127.0.0.1:7897 push`
 
 - 取消全局代理
 
