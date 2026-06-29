@@ -1554,4 +1554,41 @@ from setuptools import setup, find_packagessetup(   name=&#x27;detector&#x27;, #
         <tag>代码规范</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Vscode+tailscale实现远程连接训练</title>
+    <url>/2026/06/29/Vscode+tailscale%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E8%AE%AD%E7%BB%83/</url>
+    <content><![CDATA[Ubuntu端(Server)SSH# 安装sudo apt updatesudo apt install openssh-server# 启用且设置开机自启动sudo systemctl enable ssh# 检查SSH状态sudo systemctl status ssh# 生成密钥ssh-keygen -t 
+
+Tailscale
+很好用的内网穿透工具
+
+# 一键安装 Tailscalecurl -fsSL https://tailscale.com/install.sh | sh# 启动 Tailscale 并登录sudo tailscale up# 查询tailscale状态与iptailscale statustailscale ip
+
+Windows端(Client)SSH一般windows11内置openssh.client， 可以通过管理员运行powershell命令查询
+Get-WindowsCapability -Online | Where-Object Name -like &#x27;OpenSSH*&#x27;
+
+TailscaleDownload | Tailscale下载Windows版的Taiscale并登录，点击Add device将本机添加到局域网即可
+Vscode
+安装Remote-SSH插件
+
+点击加号新建远程并输入ssh name@ip其中 name指的是连接的电脑账户名称,ip就是前面tailscale ip查出来的ip
+
+
+选择默认config配置后输入密码连接就可以了
+
+
+Tmux
+用来保持训练在后台运行，不会因为ssh终端关闭而停止
+
+# 创建窗口tmux new -s throw# 断开窗口 # ctrl+b再按d# 重新连接窗口 tmux ls # 查看正在运行的窗口tmux attch -t throw # 连接任务名为 throw 的窗口# 完全结束窗口进程# ctrl+d
+
+]]></content>
+      <categories>
+        <category>计算机基础知识</category>
+      </categories>
+      <tags>
+        <tag>ssh</tag>
+        <tag>远程连接</tag>
+      </tags>
+  </entry>
 </search>
